@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+boto3 = ">=1.26.137"
+python-jose = ">=3.3.0"
+pytest = ">=7.3.1"
+typing-extensions = ">=4.0.0"
+aws-cdk-lib = "==2.124.0"
+constructs = ">=10.0.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
