@@ -73,7 +73,7 @@ class WarehouseStack(Stack):
             self,
             "InventoryHandler",
             runtime=lambda_.Runtime.PYTHON_3_9,
-            code=lambda_.Code.from_asset("lambda"),
+            code=lambda_.Code.from_asset("backend/functions"),
             handler="inventory.handler",
             environment={
                 "INVENTORY_TABLE": inventory_table.table_name,
@@ -86,7 +86,7 @@ class WarehouseStack(Stack):
             self, 'SeedDataFunction',
             runtime=lambda_.Runtime.PYTHON_3_9,
             handler='seed_data.handler',
-            code=lambda_.Code.from_asset('lambda'),
+            code=lambda_.Code.from_asset('backend/functions'),
             environment={
                 'INVENTORY_TABLE': inventory_table.table_name,
                 'ORDERS_TABLE': orders_table.table_name,
